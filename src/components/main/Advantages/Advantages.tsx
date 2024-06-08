@@ -1,5 +1,11 @@
-import {} from "./Advantages.styles";
-import { Icon } from "@/components/common/Icon";
+import { Wrapper } from "@/app/GlobalStyles";
+import {
+  AdvantagesList,
+  AdvantageItem,
+  AdvantageNumber,
+  AdvantageImage,
+  AdvantageDescription,
+} from "./Advantages.styles";
 
 export default function Advantages() {
   return (

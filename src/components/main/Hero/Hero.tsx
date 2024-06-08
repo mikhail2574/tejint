@@ -1,3 +1,4 @@
+import { Wrapper } from "@/app/GlobalStyles";
 import {
   SectionContainer,
   Header,
@@ -9,7 +10,6 @@ import {
   MainSubtitle,
   MainDescription,
   HeroButton,
-  Wrapper,
   ImageFilterContainer,
 } from "./Hero.styles";
 import { Icon } from "@/components/common/Icon";

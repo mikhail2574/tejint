@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
 
 export const SectionTitle = styled.h3`
   text-align: center;
+  color: var(--brown);
+  font-weight: 700;
   font-size: 28px;
   line-height: 40px;
+  margin-bottom: 20px;
 `;

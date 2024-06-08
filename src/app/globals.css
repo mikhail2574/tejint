@@ -4,6 +4,7 @@
 
 :root {
   --brown: #964602;
+  --brown_transparent: rgba(150, 70, 2, 0.30);
 }
 
 @media (prefers-color-scheme: dark) {
