@@ -1,9 +1,5 @@
-import { SectionTitle, Wrapper } from "@/app/GlobalStyles";
-import {
-  AppointmentButton,
-  SectionContainer,
-  SectionDescription,
-} from "./About.styles";
+import { AppointmentButton, SectionTitle, Wrapper } from "@/app/GlobalStyles";
+import { SectionContainer, SectionDescription } from "./About.styles";
 import Image from "next/image";
 import about_mobile from "/src/assets/about_mobile.webp";
 

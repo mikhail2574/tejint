@@ -8,6 +8,7 @@ export const AdvantagesList = styled.ul`
   justify-content: center;
   gap: 20px 106px;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 `;
 
 export const AdvantageItem = styled.li`
