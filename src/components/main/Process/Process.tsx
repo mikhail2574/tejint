@@ -9,14 +9,14 @@ import { Card, CardDescription, CardList, CardTitle } from "./Process.styles";
 
 export default function About() {
   return (
-    <Wrapper>
-      <Section>
-        <SectionTitle>The process</SectionTitle>
+    <Section className="column gray pt-12 pb-12">
+      <Wrapper>
+        <SectionTitle className="big-margin">The process</SectionTitle>
         <CardList>
           <Card>
-            <CardTitle>Ordering the suit</CardTitle>
+            <CardTitle className="process">Ordering the suit</CardTitle>
             <CardDescription>
-              <SectionDescription>
+              <SectionDescription className="process">
                 The process begins with an initial consultation where the client
                 discusses their style preferences, fabric choices, and design
                 details with the tailor. During this consultation, precise
@@ -28,9 +28,9 @@ export default function About() {
             </CardDescription>
           </Card>
           <Card>
-            <CardTitle>Fitting</CardTitle>
+            <CardTitle className="process">Fitting</CardTitle>
             <CardDescription>
-              <SectionDescription>
+              <SectionDescription className="process">
                 After the initial consultation, the client attends one or more
                 fitting sessions where they try on a mock-up or
                 &quot;basted&quot; version of the suit. During these fittings,
@@ -43,9 +43,9 @@ export default function About() {
             </CardDescription>
           </Card>
           <Card>
-            <CardTitle>Receiving the order</CardTitle>
+            <CardTitle className="process">Receiving the order</CardTitle>
             <CardDescription>
-              <SectionDescription>
+              <SectionDescription className="process">
                 Once the final fitting has been completed and the suit meets the
                 client&apos;s expectations, the bespoke suit is carefully
                 constructed using the chosen fabric and design details. After
@@ -58,7 +58,7 @@ export default function About() {
             </CardDescription>
           </Card>
         </CardList>
-      </Section>
-    </Wrapper>
+      </Wrapper>
+    </Section>
   );
 }

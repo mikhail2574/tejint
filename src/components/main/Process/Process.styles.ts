@@ -5,6 +5,9 @@ export const CardList = styled.ul`
   display: flex;
   gap: 20px;
   flex-direction: column;
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+  }
 `;
 
 export const Card = styled.li`
@@ -17,6 +20,13 @@ export const CardTitle = styled.h4`
   color: var(--brown);
   font-weight: 700;
   font-size: 20px;
+  @media screen and (min-width: 1440px) {
+    font-size: 32px;
+    line-height: 36px;
+    &.process {
+      padding-bottom: 32px;
+    }
+  }
 `;
 
 export const CardDescription = styled.div`

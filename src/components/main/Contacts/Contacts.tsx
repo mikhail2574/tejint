@@ -21,9 +21,11 @@ import { Icon } from "@/components/common/Icon";
 export default function Contacts() {
   return (
     <Wrapper>
-      <Section>
+      <SectionTitle>Contacts</SectionTitle>
+      <Section id="contacts">
+        <SectionTitle>Contacts</SectionTitle>
         <ContactsList>
-          <ContactsItem>
+          <ContactsItem className="loc1">
             <FlexItem>
               <LocationContainer>
                 <Icon name="location" size={24} />
@@ -62,7 +64,7 @@ export default function Contacts() {
               </LocationContainer>
             </FlexItem>
           </ContactsItem>
-          <ContactsItem>
+          <ContactsItem className="loc2">
             <FlexItem>
               <LocationContainer>
                 <Icon name="location" size={24} />
@@ -91,7 +93,7 @@ export default function Contacts() {
               </LocationContainer>
             </FlexItem>
           </ContactsItem>
-          <ContactsItem>
+          <ContactsItem className="loc3">
             <FlexItem>
               <LocationContainer>
                 <Icon name="location" size={24} />
