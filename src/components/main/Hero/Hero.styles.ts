@@ -54,7 +54,11 @@ export const Logo = styled(Icon)``;
 export const DesktopNav = styled.div`
   display: flex;
   align-items: center;
-
+  &.contacts {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
   @media screen and (max-width: 1440px) {
     display: none;
   }

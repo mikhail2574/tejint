@@ -1,5 +1,6 @@
-import { Section, Wrapper } from "@/app/GlobalStyles";
+import { OnlyDesktop, OnlyMobile, Section, Wrapper } from "@/app/GlobalStyles";
 import footer_logo from "/src/assets/footer_logo_mobile.webp";
+import footer_desktop from "/src/assets/footer_desktop.webp";
 import Image from "next/image";
 import {
   FooterSect,
@@ -13,7 +14,7 @@ export default function Footer() {
     <Section>
       <Wrapper>
         <FooterSect>
-          <NavContainer>
+          <NavContainer className="main">
             <NavContainer>
               <NavItem>About the company</NavItem>
               <NavItem>Bespoke</NavItem>
@@ -31,7 +32,12 @@ export default function Footer() {
             </NavContainer>
           </NavContainer>
           <LogoContainer>
-            <Image src={footer_logo} alt="big logo" />
+            <OnlyMobile>
+              <Image src={footer_logo} alt="big logo" />
+            </OnlyMobile>
+            <OnlyDesktop>
+              <Image src={footer_desktop} alt="big logo" />
+            </OnlyDesktop>
           </LogoContainer>
         </FooterSect>
       </Wrapper>

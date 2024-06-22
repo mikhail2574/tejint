@@ -18,6 +18,7 @@ export const BurgerContainer = styled.div`
   &.disabled {
     width: 1px;
     height: 1px;
+    transform: translateX(-1px);
   }
 `;
 

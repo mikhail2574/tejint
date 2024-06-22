@@ -62,6 +62,9 @@ export const SectionDescription = styled.p`
       align-items: center;
       justify-content: center;
     }
+    &.big-line-height {
+      line-height: 36px;
+    }
   }
 `;
 

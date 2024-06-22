@@ -1,5 +1,7 @@
 import {
   AppointmentButton,
+  OnlyDesktop,
+  OnlyMobile,
   Section,
   SectionDescription,
   SectionTitle,
@@ -16,34 +18,43 @@ import {
 } from "./Contacts.styles";
 import Image from "next/image";
 import contacts_mobile from "/src/assets/contacts_mobile.webp";
+import contacts_desktop from "/src/assets/contacts_desktop.webp";
 import { Icon } from "@/components/common/Icon";
+import { DesktopNav, MobileBurger } from "../Hero/Hero.styles";
 
 export default function Contacts() {
   return (
     <Wrapper>
-      <SectionTitle>Contacts</SectionTitle>
+      <DesktopNav>
+        <SectionTitle className="m-auto big-margin">Contacts</SectionTitle>
+      </DesktopNav>
       <Section id="contacts">
-        <SectionTitle>Contacts</SectionTitle>
+        <MobileBurger>
+          <SectionTitle>Contacts</SectionTitle>
+        </MobileBurger>
         <ContactsList>
           <ContactsItem className="loc1">
             <FlexItem>
               <LocationContainer>
                 <Icon name="location" size={24} />
                 <TextContainer>
-                  <SectionDescription className="font-bold">
+                  <SectionDescription className="font-bold big-line-height">
                     Location:
                   </SectionDescription>
                   <SectionDescription>Kyiv, Ukraine</SectionDescription>
-                  <SectionDescription>
-                    Olesya Gonchara
-                    <br /> 15/3 Street
+                  <SectionDescription className="no-width-limit">
+                    <DesktopNav>Olesya Gonchara, 15/3 Street</DesktopNav>
+                    <MobileBurger>
+                      Olesya Gonchara
+                      <br /> 15/3 Street
+                    </MobileBurger>
                   </SectionDescription>
                 </TextContainer>
               </LocationContainer>
               <LocationContainer>
                 <Icon name="phone" size={24} />
                 <TextContainer>
-                  <SectionDescription className="font-bold">
+                  <SectionDescription className="font-bold big-line-height">
                     Contact number:
                   </SectionDescription>
                 </TextContainer>
@@ -53,13 +64,25 @@ export default function Contacts() {
               <LocationContainer>
                 <Icon name="time" size={24} />
                 <TextContainer>
-                  <SectionDescription className="font-bold">
+                  <SectionDescription className="font-bold big-line-height">
                     Working Hours:
                   </SectionDescription>
-                  <SectionDescription>Monday - Friday:</SectionDescription>
-                  <SectionDescription>09:30 am - 19:30 pm</SectionDescription>
-                  <SectionDescription>Saturday - Sunday:</SectionDescription>
-                  <SectionDescription>10:00 am - 17: 00 pm</SectionDescription>
+                  <OnlyMobile>
+                    <SectionDescription>Monday - Friday:</SectionDescription>
+                    <SectionDescription>09:30 am - 19:30 pm</SectionDescription>
+                    <SectionDescription>Saturday - Sunday:</SectionDescription>
+                    <SectionDescription>
+                      10:00 am - 17: 00 pm
+                    </SectionDescription>
+                  </OnlyMobile>
+                  <OnlyDesktop>
+                    <SectionDescription>
+                      Monday - Friday: 09:30 am - 19:30 pm
+                    </SectionDescription>
+                    <SectionDescription>
+                      Saturday - Sunday: 10:00 am - 17: 00 pm
+                    </SectionDescription>
+                  </OnlyDesktop>
                 </TextContainer>
               </LocationContainer>
             </FlexItem>
@@ -69,7 +92,7 @@ export default function Contacts() {
               <LocationContainer>
                 <Icon name="location" size={24} />
                 <TextContainer>
-                  <SectionDescription className="font-bold">
+                  <SectionDescription className="font-bold big-line-height">
                     Location:
                   </SectionDescription>
                   <SectionDescription>Dubai, UAE</SectionDescription>
@@ -80,7 +103,7 @@ export default function Contacts() {
               <LocationContainer>
                 <Icon name="phone" size={24} />
                 <TextContainer>
-                  <SectionDescription className="font-bold">
+                  <SectionDescription className="font-bold big-line-height">
                     Contact number:
                   </SectionDescription>
                   <SectionDescription>
@@ -98,7 +121,7 @@ export default function Contacts() {
               <LocationContainer>
                 <Icon name="location" size={24} />
                 <TextContainer>
-                  <SectionDescription className="font-bold">
+                  <SectionDescription className="font-bold big-line-height">
                     Location:
                   </SectionDescription>
                   <SectionDescription>London, England</SectionDescription>
@@ -110,7 +133,7 @@ export default function Contacts() {
                 <LocationContainer>
                   <Icon name="phone" size={24} />
                   <TextContainer>
-                    <SectionDescription className="font-bold">
+                    <SectionDescription className="font-bold big-line-height">
                       Contact number:
                     </SectionDescription>
                     <SectionDescription>
@@ -121,23 +144,49 @@ export default function Contacts() {
               </FlexItem>
             </FlexItem>
           </ContactsItem>
+          <ContactsItem className="loc4">
+            <DesktopNav className="contacts">
+              <SectionDescription className="mb-4 font-bold">
+                Our social media:
+              </SectionDescription>
+              <SocialMediaList>
+                <SocialMediaItem>
+                  <a href="#">
+                    <Icon name="instagram" />
+                  </a>
+                </SocialMediaItem>
+                <SocialMediaItem>
+                  <a href="#">
+                    <Icon name="facebook" />
+                  </a>
+                </SocialMediaItem>
+              </SocialMediaList>
+            </DesktopNav>
+          </ContactsItem>
         </ContactsList>
-        <SectionDescription className="mb-4 mt-2 font-bold">
-          Our social media:
-        </SectionDescription>
-        <SocialMediaList>
-          <SocialMediaItem>
-            <a href="#">
-              <Icon name="instagram" />
-            </a>
-          </SocialMediaItem>
-          <SocialMediaItem>
-            <a href="#">
-              <Icon name="facebook" />
-            </a>
-          </SocialMediaItem>
-        </SocialMediaList>
-        <Image src={contacts_mobile} alt="view of clothing shop" />
+        <MobileBurger>
+          <SectionDescription className="mb-4 mt-2 font-bold">
+            Our social media:
+          </SectionDescription>
+          <SocialMediaList>
+            <SocialMediaItem>
+              <a href="#">
+                <Icon name="instagram" />
+              </a>
+            </SocialMediaItem>
+            <SocialMediaItem>
+              <a href="#">
+                <Icon name="facebook" />
+              </a>
+            </SocialMediaItem>
+          </SocialMediaList>
+        </MobileBurger>
+        <MobileBurger>
+          <Image src={contacts_mobile} alt="view of clothing shop" />
+        </MobileBurger>
+        <DesktopNav>
+          <Image src={contacts_desktop} alt="view of clothing shop" />
+        </DesktopNav>
       </Section>
     </Wrapper>
   );
